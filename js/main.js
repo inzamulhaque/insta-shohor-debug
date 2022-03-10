@@ -72,3 +72,12 @@ const data = {
         `
     }
 };
+
+const getAnswer = qId => {
+    const modalHeader = document.getElementById("exampleModalLabel");
+    const modalBody = document.getElementById("modalBody");
+    modalHeader.textContent = "";
+    modalBody.textContent = "";
+    modalHeader.innerText = data[qId].question;
+    modalBody.innerHTML = data[qId].answer;
+}
